@@ -7,7 +7,7 @@
 
 ## Table of Contents
 
-[About] (###About)
+[About](###About)
 
 ---
 
