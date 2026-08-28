@@ -62,6 +62,6 @@
 - [ ] If multiple tasks have the same deadline, order them alphabetically
 - [ ] User can adjust the task deadline (eg: extensions)
 - [ ] User can tick and untick tasks when completed
-- [ ] Current time and date will be shown on the planner
+- [x] Current time and date will be shown on the planner
 
 ---
