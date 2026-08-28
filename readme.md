@@ -9,6 +9,12 @@
 
 [About](###About)
 
+[Features](###Features)
+
+[Tech Stack](###Tech-Stack)
+
+[What's Next?](###What's-Next?)
+
 ---
 
 ## About
