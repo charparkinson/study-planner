@@ -55,7 +55,7 @@
 
 ## What's Next?
 
-> I am currently working on Version 1 of this study planner
+> 🚨 I am currently working on Version 1 of this study planner
 
 - [ ] User can create a task
 - [ ] Tasks are ordered by deadlines (task due tomorrow > task due in 7 days)
