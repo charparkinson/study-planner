@@ -13,6 +13,8 @@
 
 [Tech Stack](###Tech-Stack)
 
+[Status](###Status)
+
 [What's Next?](###What's-Next?)
 
 ---
@@ -26,6 +28,14 @@
 ---
 
 ## Tech Stack
+
+---
+
+## Status
+
+> 🚧 WIP
+> 
+>> I am aiming to have this project completed by **October 1st 2026**
 
 ---
 
