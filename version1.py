@@ -25,7 +25,7 @@ while valid_date == True:
 
 print(f"{task_name} is due on {task_due.strftime('%d/%m/%Y')}")
 
-
+"""
 # allow user to update the deadline date
 valid_date = True
 while valid_date == True:
@@ -38,3 +38,17 @@ while valid_date == True:
         print("Wrong input, please try again.")
 
 print(f"The deadline for {task_name} has been updated and is now due on {update_deadline.strftime('%d/%m/%Y')}")
+"""
+
+# order tasks by their deadline
+
+# user should be able to add task name and deadline to a list
+task_list = [
+    {"task": "assignment 1", "deadline": "01/12/2026"}
+]
+
+task_list.append({"task": task_name, "deadline": task_due})
+
+print(task_list)
+
+# next step: make sure deadline in list is in same format as task_list (dd/mm/yyyy)
