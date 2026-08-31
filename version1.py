@@ -9,9 +9,13 @@ current_time = datetime.now()
 print(current_time.strftime('%X'))
 """
 
+def order_deadline(task):
+  return task['deadline'], task['task']
+
 # allow user to create a task
 task_name = input("What is the name of your task?: ")
 print(f"I am now setting up {task_name}")
+
 
 # get user to confirm a date for deadline of task
 valid_date = True
@@ -23,9 +27,9 @@ while valid_date == True:
     except:
         print("Wrong input, please try again.")
 
-print(f"{task_name} is due on {task_due.strftime('%d/%m/%Y')}")
+#print(f"{task_name} is due on {task_due.strftime('%d/%m/%Y')}")
 
-
+"""
 # allow user to update the deadline date
 valid_date = True
 while valid_date == True:
@@ -38,3 +42,17 @@ while valid_date == True:
         print("Wrong input, please try again.")
 
 print(f"The deadline for {task_name} has been updated and is now due on {update_deadline.strftime('%d/%m/%Y')}")
+"""
+
+# user should be able to add task name and deadline to a list
+task_list = [
+    {"task": "assignment 1", "deadline": datetime.strptime("05/12/2026", '%d/%m/%Y')}
+]
+
+task_list.append({"task": task_name, "deadline": task_due})
+
+# order tasks by deadline and task name. if 2 or more tasks share a deadline, the task is listed alphabetically
+
+task_list.sort(key=order_deadline)
+
+print(task_list)
