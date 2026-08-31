@@ -47,8 +47,9 @@ task_list = [
     {"task": "assignment 1", "deadline": "01/12/2026"}
 ]
 
-task_list.append({"task": task_name, "deadline": task_due})
+task_list.append({"task": task_name, "deadline": task_due.strftime('%d/%m/%Y')})
 
 print(task_list)
 
-# next step: make sure deadline in list is in same format as task_list (dd/mm/yyyy)
+# order tasks by deadline
+
