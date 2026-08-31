@@ -58,7 +58,7 @@
 > 🚨 I am currently working on Version 1 of this study planner
 
 - [x] User can create a task
-- [ ] Tasks are ordered by deadlines (task due tomorrow > task due in 7 days)
+- [x] Tasks are ordered by deadlines (task due tomorrow > task due in 7 days)
 - [ ] If multiple tasks have the same deadline, order them alphabetically
 - [x] User can adjust the task deadline (eg: extensions)
 - [ ] User can tick and untick tasks when completed
