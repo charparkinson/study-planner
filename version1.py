@@ -1,0 +1,73 @@
+from datetime import datetime
+"""
+# display current date in the format dd/mm/yy
+current_date = datetime.now()
+print(current_date.strftime('%d %B %Y'))
+
+# display current time
+current_time = datetime.now()
+print(current_time.strftime('%X'))
+"""
+
+def order_deadline(task):
+  return task['deadline'], task['task']
+
+# allow user to create a task
+task_name = input("What is the name of your task?: ")
+print(f"I am now setting up {task_name}")
+
+
+# get user to confirm a date for deadline of task
+valid_date = True
+while valid_date == True:
+    task_due = input("When is your task due? Please enter the due date in the form of dd/mm/yyyy: ")
+    try:
+        task_due = datetime.strptime(task_due, '%d/%m/%Y')
+        valid_date = False
+    except:
+        print("Wrong input, please try again.")
+
+#print(f"{task_name} is due on {task_due.strftime('%d/%m/%Y')}")
+
+"""
+# allow user to update the deadline date
+valid_date = True
+while valid_date == True:
+    update_deadline = input(
+        f"What is the new deadline for {task_name}? Please enter the date in the format of dd/mm/yyyy: ")
+    try:
+        update_deadline = datetime.strptime(update_deadline, '%d/%m/%Y')
+        valid_date = False
+    except:
+        print("Wrong input, please try again.")
+
+print(f"The deadline for {task_name} has been updated and is now due on {update_deadline.strftime('%d/%m/%Y')}")
+"""
+
+# allow user to confirm completion of deadline/ non completion of deadline
+
+completion_enquiry = input("Has this task been completed?: ")
+
+while completion_enquiry != "yes" and completion_enquiry != "no":
+    print(f"Incorrect. Please answer 'yes' or 'no'")
+    completion_enquiry = input("Has this task been completed?: ")
+
+if completion_enquiry == "yes":
+    completion_status= True
+
+elif completion_enquiry == "no":
+    completion_status = False
+
+
+# user should be able to add task name and deadline to a list
+task_list = [
+    {"task": "assignment 1", "deadline": datetime.strptime("05/12/2026", '%d/%m/%Y'), "task_complete": False}
+]
+
+task_list.append({"task": task_name, "deadline": task_due, "task_complete": completion_status})
+
+# order tasks by deadline and task name. if 2 or more tasks share a deadline, the task is listed alphabetically
+
+task_list.sort(key=order_deadline)
+
+print(task_list)
