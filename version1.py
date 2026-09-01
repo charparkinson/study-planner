@@ -44,12 +44,27 @@ while valid_date == True:
 print(f"The deadline for {task_name} has been updated and is now due on {update_deadline.strftime('%d/%m/%Y')}")
 """
 
+# allow user to confirm completion of deadline/ non completion of deadline
+
+completion_enquiry = input("Has this task been completed?: ")
+
+while completion_enquiry != "yes" and completion_enquiry != "no":
+    print(f"Incorrect. Please answer 'yes' or 'no'")
+    completion_enquiry = input("Has this task been completed?: ")
+
+if completion_enquiry == "yes":
+    completion_status= True
+
+elif completion_enquiry == "no":
+    completion_status = False
+
+
 # user should be able to add task name and deadline to a list
 task_list = [
-    {"task": "assignment 1", "deadline": datetime.strptime("05/12/2026", '%d/%m/%Y')}
+    {"task": "assignment 1", "deadline": datetime.strptime("05/12/2026", '%d/%m/%Y'), "task_complete": False}
 ]
 
-task_list.append({"task": task_name, "deadline": task_due})
+task_list.append({"task": task_name, "deadline": task_due, "task_complete": completion_status})
 
 # order tasks by deadline and task name. if 2 or more tasks share a deadline, the task is listed alphabetically
 
